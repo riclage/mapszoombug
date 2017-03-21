@@ -63,8 +63,6 @@ public class MapsActivity extends AppCompatActivity {
             root = (ViewGroup) itemView;
             mapView = (MapView) root.findViewById(R.id.map);
             mapView.onCreate(null);
-            mapView.onStart();
-            mapView.onResume();
         }
 
         void bind(final Route route) {
