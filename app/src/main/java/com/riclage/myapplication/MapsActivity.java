@@ -1,13 +1,13 @@
 package com.riclage.myapplication;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import com.example.databinding.RecyclerViewActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -18,17 +18,13 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapsActivity extends AppCompatActivity {
-
-    private RecyclerView recyclerView;
+public class MapsActivity extends RecyclerViewActivity {
 
     private MapsAdapter adapter = new MapsAdapter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
@@ -37,18 +33,6 @@ public class MapsActivity extends AppCompatActivity {
             "cmeiHmmjMKfA[pBMh@H\\R`B\\|DBZMt@|Ap@VLf@oBzAuFlBaH\\{ALa@NMXu@\\qAlBwGzBkIjBqHxAiFdAaELq@Lc@P_@JKd@o@RWROLE`@C`DAjDEb@KVKZa@~AwC|B{DxCcFP]j@i@\\[h@c@NMPQv@o@z@}@pAyAdAyA|AcCrBiDNg@Lk@NiANk@Ti@tB{C@EbCsDdF}GdEcFjHmI|EkGz@_AhB{AvBsClBkCJMvByCn@cAJW\\w@`DuElMgQjEgGjA_Bl@m@PGHCt@g@|Ay@XQNMl@c@l@m@d@m@bAmBFOBSBWJkBBo@Tw@PYRMPCFCJ?NFTPLJJDLj@bD`N^|AhBdHnAnD~AlDzCrG`KpRXj@n@|Aj@nBn@nChMvj@fHxZdAxC~@jC?R@TZbBTtBF|C?x@K`CCnAAf@ElBGrES|FBhAHj@FTN^`@h@bCdBlIfGz@z@h@t@t@lAr@vAj@tA|BvFhAbCz@zAz@jAn@t@x@v@|AnA~AxA|GbHbD`DlItHpBbBbAn@`Bp@|FnAzCh@pBFlHc@xHg@z@CpBBbBAvAOhAU`FsAjASpAI|@?dCRdK`B`BRj@D`B@|@A~@IhAQlAYjFkBhHqC~DuA|Aa@fB]|@OpCYvCKtC?bBFlFZ|Ih@T@@?vO~@j@Bj@BvGp@vBPVOLAjDPf@B~@JxAT`Cp@N?h@PnBz@~DpBbBn@lBd@b@D~BH~DItCSn@E~@MpBWv@O|@SjBk@zAo@|@c@l@_@jBkAnC_Cb^u]`VwUbB}Ah]y\\lDmDdB{Az@m@tA{@`By@~@_@pDmAnA_@l@DZJZTTXLXJf@Tx@^dCHTRPGT?VBVHPWf@_@b@mErAU?OEGCKUc@yAA_@Ec@Dk@Jc@DGBO?QEOIIKAIDEB_@I_@SIAQQMSYu@Uq@e@aBIW?MA[AYAQBABABAFI@I?WGSKIGAu@}@c@_@Q]gCkIEg@cDyLOi@COAQByHG{AEwCEqAEcFGiMAeECeLA}J?oB@_DDW@k@Fa@BQHYFOn@gAXm@FKL[Po@Hg@F}@BaABwBFkADq@P}@J[L[LOMQS]KQSs@@sBHgAjAiNZmD?[AgAAeGH{JDgFRsCAyCIaB]yFK}AK{BU{CI_@MkA");
         List<Route> routes = new ArrayList<>();
         routes.add(single);
-        routes.add(single);
-        routes.add(single);
-        routes.add(single);
-        routes.add(single);
-        routes.add(single);
-        routes.add(single);
-        routes.add(single);
-        routes.add(single);
-        routes.add(single);
-        routes.add(single);
-
-
 
         adapter.setRoutes(routes);
     }
